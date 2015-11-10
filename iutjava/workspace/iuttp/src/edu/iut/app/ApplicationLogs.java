@@ -10,27 +10,27 @@ public class ApplicationLogs extends ArrayList<IApplicationLog> {
 	
 	public ArrayList<IApplicationLog> getErrors() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
-		for(int i =0; i<this.size();i++){
-			if(this.get(i) instanceof ApplicationErrorLogs){
-				filteredLogs.add(this.get(i));
+		for (IApplicationLog a : this) {
+			if (a instanceof ApplicationErrorLog) {
+				filteredLogs.add(a);
 			}
 		}
 		return filteredLogs;
 	}
 	public ArrayList<IApplicationLog> getWarnings() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
-		for(int i =0; i<this.size();i++){
-			if(this.get(i) instanceof ApplicationWarningLogs){
-				filteredLogs.add(this.get(i));
+		for (IApplicationLog a : this) {
+			if (a instanceof ApplicationWarningLog) {
+				filteredLogs.add(a);
 			}
 		}
 		return filteredLogs;
 	}
 	public ArrayList<IApplicationLog> getInfos() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
-		for(int i =0; i<this.size();i++){
-			if(this.get(i) instanceof ApplicationInfoLogs){		
-				filteredLogs.add(this.get(i));
+		for (IApplicationLog a : this) {
+			if (a instanceof ApplicationInfoLog) {
+				filteredLogs.add(a);
 			}
 		}
 		return filteredLogs;

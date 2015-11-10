@@ -7,7 +7,6 @@ public class ApplicationInfoMessageDialog extends
 
 	@Override
 	protected void showMessage(String level, String message) {
-		boiteInfo = new JOptionPane();
-		boiteInfo.showMessageDialog(null, message, level, JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, message, level, JOptionPane.INFORMATION_MESSAGE, null);
 	}
 }
