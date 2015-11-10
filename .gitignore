@@ -1,0 +1,3 @@
+#ignorer les dossiers créés par eclipse
+.metadata
+RemoteSystemsTempFiles
